@@ -1,0 +1,87 @@
+*{
+  list-style-type: none;
+  font-family: sans-serif;
+}
+body{
+  background-color: rgb(231,231,231);
+}
+h3{
+  font-family: "Roboto Mono"
+}
+.main_header{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  color: white;
+  background-color: rgb(20,54,86);
+  padding: 5px;
+  font-family: "Roboto Mono", "monospace";
+  font-size: 20px;
+
+
+}
+.main_menu{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+li{
+  margin-right: 35px;
+  color: white;
+  font-style: "Roboto Mono", "monospace";
+}
+.logo{
+  /* width: 80px; */
+  height: 40px;
+  margin-right: 5px;
+}
+
+/*
+estilos formularios ============================
+=================================================== */
+
+.div_registros{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100vh;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+.impresores_form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  border: 2px solid;
+  border-color: rgb(20,54,86);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.impresores_form input {
+  margin-bottom: 10px;
+  height: 22px;
+
+}
+.usuarios_form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  border: 2px solid;
+  border-color: rgb(20,54,86);
+  border-radius: 10px;
+  padding: 15px;
+}
+.usuarios_form input {
+  margin-bottom: 10px;
+  height: 22px;
+  }

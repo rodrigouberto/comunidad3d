@@ -1,0 +1,37 @@
+*{
+  font-family: "Roboto Mono", "monospace";
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+body{
+  /* background-color: rgb(32,141,170); */
+  background-color: rgb(231,231,231);
+
+}
+.logo{
+  /* width: 80px; */
+  height: 40px;
+  margin-right: 5px;
+}
+.main_header{
+  color: white;
+  background-color: rgb(20,54,86);
+  padding: 5px;
+  font-family: "Roboto Mono", "monospace";
+  font-size: 20px;
+
+}
+.main_menu{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+li{
+  margin-right: 35px;
+  color: white;
+  font-style: "Roboto Mono", "monospace";
+}
