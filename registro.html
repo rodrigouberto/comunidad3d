@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="registroStyles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Registro - Print it</title>
@@ -11,58 +11,49 @@
   <body>
     <div class="main_container">
       <header class="main_header">
-        <ul class="main_menu">
-          <img class="logo" src="img/mundo.png" alt="logo">
-          <li>Print it!</li>
-          <!-- <li><a class="inicio_sesion" href="#">Iniciar sesión</a></li>
-          <li><a class="impresion_3d" href="#">Impresion 3D</a></li> -->
-          <li></li>
-        </ul>
-      </header>
-      <div class="div_registros">
-
-
-        <div class="registro_impresores">
-          <h3>Quiero ofrecer mi servicio</h3>
-          <form class="impresores_form" action="" method="post">
-            <label for="nombreUsuario">Nombre de usuario</label>
-            <input type="text" name="nombreUsuario" value="">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" value="">
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" value="">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" value="">
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" value="">
-            <label for="confirmarPassword">Confirme contraseña</label>
-            <input type="password" name="confirmarPassword" value="">
-
-            <input type="submit" name="" value="Registrarse">
-          </form>
+        <div class="header_izquierdo">
+          <h2>Print It!</h2>
         </div>
-      <div class="registro_usuarios">
-        <h3>Necesito imprimir</h3>
+          
+        <div class="inicio_sesion">
+          <form class="inputs_inicio" action="index.html" method="post">
+        <div class="div_email">
+          <input id="email_inicio" class="email_inicio" type="email" name="email_inicio" value="" placeholder="E-mail">
+          <br>
+          <label class="recordarUsuario" for="email_inicio">Recordar usuario <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
+        </div>
+
+        <div class="div_pass">
+          <input id="pass_inicio" class="pass_inicio" type="password" name="password" value="" placeholder="Password">
+          <br>
+          <label class="recordarUsuario" for="pass_inicio">Recordar contraseña <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
+      </div>
+      <input class="boton_inicio" type="submit" name="submit_usuario" value="Iniciar Sesión">
+      </form>
+    </div>
+    </header>
+      <div class="parte_inferior">    
+        <div class="registro_usuarios">
+        <h3>Registrese!</h3>
         <form class="usuarios_form" action="" method="post">
           <label for="nombreUsuario">Nombre de usuario</label>
-          <input type="text" name="nombreUsuario" value="">
+          <input class="normal" type="text" name="nombreUsuario" value="">
           <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" value="">
+          <input class="normal" type="text" name="nombre" value="">
           <label for="apellido">Apellido</label>
-          <input type="text" name="apellido" value="">
+          <input class="normal" type="text" name="apellido" value="">
           <label for="email">E-mail</label>
-          <input type="email" name="email" value="">
+          <input class="normal" type="email" name="email" value="">
           <label for="password">Contraseña</label>
-          <input type="password" name="password" value="">
+          <input class="normal" type="password" name="password" value="">
           <label for="confirmarPassword">Confirme contraseña</label>
-          <input type="password" name="confirmarPassword" value="">
-
-          <input type="submit" name="" value="Registrarse">
-
+          <input class="normal" type="password" name="confirmarPassword" value="">
+            <div class="enviar">
+              <input type="submit" name="" value="Registrarse" >
+            </div>
         </form>
       </div>
     </div>
-
-    </div>
+  </div>
   </body>
 </html>
