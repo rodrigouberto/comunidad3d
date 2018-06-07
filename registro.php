@@ -18,7 +18,7 @@ if ($_POST) {
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="registroStyles.css">
+    <link rel="stylesheet" href="css/registroStyles.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -64,18 +64,19 @@ if ($_POST) {
           <label for="password">Contraseña</label>
           <input class="normal" type="password" name="password" id="password" value="">
           <div id='register_password_errorloc' class='error' style='clear:both'><?php echo !empty($errores["password"])?$errores["password"]:"" ?></div>
+          <?php
+          $prueba = "test";
+          if (!isset($_GET["versionCorta"])) {
+          ?>
+      <label for="confirmarPassword">Confirme contraseña</label>
+      <input class="normal" type="password" name="cpassword" id="cpassword" value="">
+      <div id='register_password_errorloc' class='error' style='clear:both'><?php echo !empty($errores["cpassword"])?$errores["cpassword"]:"" ?></div>
+        <?php }; ?>
+        <div class="enviar">
+          <input type="submit" name="submit" value="Enviar">
+        </div>
                 </div>
-              <?php
-              $prueba = "test";
-              if (!isset($_GET["versionCorta"])) {
-              ?>
-          <label for="confirmarPassword">Confirme contraseña</label>
-          <input class="normal" type="password" name="cpassword" id="cpassword" value="">
-          <div id='register_password_errorloc' class='error' style='clear:both'><?php echo !empty($errores["cpassword"])?$errores["cpassword"]:"" ?></div>
-            <?php }; ?>
-            <div class="enviar">
-              <input type="submit" name="submit" value="Enviar">
-            </div>
+
         </form>
       </div>
     </div>
