@@ -40,7 +40,7 @@ if ($_POST) {
         </div>
 
         <div class="div_pass">
-          <input id="password" class="password" type="password" name="password" value="" placeholder="Password">
+          <input id="password" class="pass_inicio" type="password" name="password" value="" placeholder="Password">
           <br>
           <label class="recordarUsuario" for="pass_inicio">Recordar contraseña <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
       </div>
