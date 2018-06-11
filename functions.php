@@ -1,4 +1,5 @@
 <?php
+require_once("usuario.json");
 function validarDatos($datos){
   $errores=[];
   $uppercase = preg_match('@[a-zA-Z0-9]@', $datos["password"]);
@@ -28,12 +29,12 @@ return $errores;
 }
 function yaExiste($datos){
   $erroresExiste=[];
-  $usuarios = file_get_contents("usuarios.json");
+  $usuarios = file_get_contents("usuario.json");
   $usuarios = json_decode($usuarios,true);
   $usuarios = $usuarios["usuarios"];
   for ($i=0; $i < count($usuarios); $i++) {
     $user= json_decode($usuarios[$i],true);
-    if ($datos["username"]==$user["usuario"]) {
+    if ($datos["usuario"]==$user["usuario"]) {
       $erroresExiste["username"]="Ya existe ese usuario por favor elija otro";
     }
     if ($datos["email"]==$user["email"]) {
@@ -51,7 +52,7 @@ function crearUsuario ($datos){
   ];
 }
 function guardarUsuario ($usuario){
-$usuarios = file_get_contents("usuarios.json");
+$usuarios = file_get_contents("usuario.json");
 $arrayUsuarios = json_decode ($usuarios,true);
 $json = json_encode($usuario);
 $arrayUsuarios["usuarios"][] = $json;

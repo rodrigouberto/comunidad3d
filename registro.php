@@ -1,4 +1,5 @@
 <?php
+require_once("usuario.json");
 require_once("functions.php");
 if ($_POST) {
   $nombre=$_POST["nombre"];
@@ -44,7 +45,9 @@ if ($_POST) {
           <br>
           <label class="recordarUsuario" for="pass_inicio">Recordar contraseña <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
       </div>
-      <input class="boton_inicio" type="submit" name="submit_usuario" value="Iniciar Sesión">
+      <div class="iniciarsesion">
+        <input class="boton_inicio" type="submit" name="submit_usuario" value="Iniciar Sesión">
+      </div>
       </form>
     </div>
     </header>
