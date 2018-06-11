@@ -1,5 +1,4 @@
 <?php
-require_once("usuario.json");
 require_once("functions.php");
 if ($_POST) {
   $nombre=$_POST["nombre"];

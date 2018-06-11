@@ -1,5 +1,4 @@
 <?php
-require_once("usuario.json");
 function validarDatos($datos){
   $errores=[];
   $uppercase = preg_match('@[a-zA-Z0-9]@', $datos["password"]);
