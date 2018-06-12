@@ -1,68 +1,156 @@
 /*Estilos ====================
 =================================*/
 *{
-  font-family: "Roboto Mono", "monospace";
+  font-family: "Assistant", "monospace";
 }
 a{
   text-decoration: none;
   color: white;
 }
 body{
-  /* background-color: rgb(32,141,170); */
-  background-color: rgb(231,231,231);
+  /* background-color: rgb(231,231,231); */
+
 
 }
 .main_container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
 
 }
+
 .logo{
-  /* width: 80px; */
   height: 40px;
   margin-right: 5px;
 }
+
 .main_header{
+  display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: space-between;
+
   color: white;
   background-color: rgb(20,54,86);
   padding: 5px;
-  font-family: "Roboto Mono", "monospace";
+  font-family: "Assistant", "monospace";
   font-size: 15px;
 
 }
 .main_menu{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
+.menu_principal{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+/*
+login =============
+========================= */
+
+.inputs_inicio{
+	text-align:left;
+  box-sizing: border-box;
+  width: 45%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+  align-items: center;
+	padding-right: 10px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(231,231,231);
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Assistant", "monospace";
+  font-weight: bold;
+}
+
+
+.email_inicio{
+	width: 100%;
+	height: 24px;
+	font-size: 16px;
+  margin-top: 3px;
+
+}
+.pass_inicio{
+	width: 100%;
+	height: 24px;
+	font-size: 16px;
+  margin-top: 3px;
+
+}
+.div_email{
+	text-align: left;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.div_pass{
+	text-align: left;
+  margin-bottom: 8px;
+  width: 100%;
+
+}
+
+.boton_inicio{
+	background-color: rgb(20,54,86);;
+	color: white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	height: 24px;
+	font-size: 14px;
+	margin-left: 5px;
+  border-radius: 5px;
+  /* width: 30%; */
+  box-sizing: border-box;
+
+}
+.recordarUsuario{
+	color: rgb(20,54,86);;
+	font-size: 12px;
+}
+.recordarContrasena{
+	color: rgb(20,54,86);;
+}
+.recordar_check{
+	width: 15px;
+}
+/*
+fin login=============
+====================================== */
+
 li{
   margin-right: 35px;
   color: white;
-  font-style: "Roboto Mono", "monospace";
+  font-style: "Assistant", "monospace";
 }
 /*SLIDER =================================
 ======================================*/
 .slider{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content;
-
-}
-
-.cohete{
-  width: 100%;
-  height: 35vh;
-
 
 }
 
 /*BUSQUEDA IMPRESORES ==========
 =============================*/
 .bienvenida{
-  font-family: "Roboto Mono", "monospace";
-  /* font-size: 40px; */
+  font-family: "Assistant", "monospace";
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;
@@ -71,7 +159,7 @@ li{
   align-items: center;
 }
 .mensaje_bienvenida{
-  margin-top: 25px;
+  margin-top: 90px;
   font-size: 40px;
 }
 .mensaje_bienvenida2{
@@ -86,15 +174,16 @@ li{
   margin-top: 30px;
   padding: 5px;
   font-size: 18px;
-  font-family: "Roboto Mono", "monospace";
+  font-family: "Assistant", "monospace";
   background-color: rgb(20,54,86);
   color: white;
   text-decoration: none;
+  border-radius: 5px;
 }
 /*REGISTRO IMPRESORES    ==========
 =============================*/
 .impresores{
-  font-family: "Roboto Mono", "monospace";
+  font-family: "Assistant", "monospace";
   /* font-size: 40px; */
   display: flex;
   flex-wrap: nowrap;
@@ -118,10 +207,12 @@ li{
   margin-top: 30px;
   padding: 5px;
   font-size: 18px;
-  font-family: "Roboto Mono", "monospace";
+  font-family: "Assistant", "monospace";
   background-color: rgb(20,54,86);
   color: white;
   text-decoration: none;
+  border-radius: 5px;
+
 }
 
 /*Busqueda =============
@@ -136,9 +227,9 @@ li{
 }
 .menu_busqueda{
   color: white;
-  font-family: "Roboto Mono", "monospace";
+  font-family: "Assistant", "monospace";
   font-size: 15px;
-  display: flex;
+  |: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: flex-start;
@@ -146,11 +237,227 @@ li{
   padding: 10px;
 }
 .masInfo{
-  margin-top: 20px;
+  margin-top: 55px;
   padding: 5px;
   font-size: 16px;
-  font-family: "Roboto Mono", "monospace";
+  font-family: "Assistant", "monospace";
   background-color: rgb(20,54,86);
   color: white;
   text-decoration: none;
+  border-radius: 5px;
+}
+
+/*
+PRUEBAS ==============
+======================================== */
+.lado_izquierdo{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+  background-image: url("../img/pattern5.png");
+  background-repeat: no-repeat ;
+
+}
+.lado_derecho{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: flex-start;
+  height: 100vh;
+  background-image: url("../img/fondoRegistro.png");
+  /* background-repeat: ; */
+}
+.login2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20%;
+  width: 100%;
+  /* box-s izing: border-box; */
+}
+
+/* mas info =================
+========================================================= */
+.info_derecho{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+  height: 100vh;
+
+  color: white;
+}
+
+.info_gral{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  background-image: url("../img/fondo2.jpg");
+  background-repeat: round;
+  width: 100%;
+}
+
+
+}
+.info_izquierdo{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: flex-start;
+  height: 100vh;
+
+}
+.impresion3d{
+  font-family: "Assistant";
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  width: 80%;
+  font-size: 20px;
+}
+.impresion3d h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.impresion3d a {
+  color: black;
+}
+/*
+about us =========================
+============================================== */
+.info_us{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width:100%;
+  background-image: url("../img/foto4.jpg");
+  background-repeat: round;
+}
+
+.aboutUs_izquierdo1{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  background-repeat: round;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.aboutUs_izquierdo1 h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+    font-weight: bold;
+}
+.aboutUs_izquierdo1 li{
+  color: white;
+  margin-top: 5px;
+
+}
+.aboutUs_derecho1{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 50vh;
+  background-repeat: round;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+
+}
+.impresion3d{
+  font-family: "Assistant";
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  width: 80%;
+  font-size: 20px;
+}
+.impresion3d h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.impresion3d a {
+  color: white;
+}
+
+
+.aboutUs_derecho2{
+  font-family: sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  /* height: 50vh; */
+
+
+
+}
+.aboutUs_izquierdo2{
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: flex-start;
+  /* background-image: url("../img/elefante.jpg"); */
+  /* background-repeat: round; */
+}
+.aboutUs{
+  font-family: sans-serif;
 }

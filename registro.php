@@ -19,7 +19,8 @@ if ($_POST) {
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/registroStyles.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Registro - Print it</title>
@@ -52,8 +53,9 @@ if ($_POST) {
     </header>
       <div class="parte_inferior">
         <div class="registro_usuarios">
-        <h3>Registrese!</h3>
         <form class="usuarios_form" action="" method="post">
+          <h3>Registrese!</h3>
+
           <label for="nombreUsuario">Nombre de usuario</label>
           <input class="normal" type="text" name="usuario" id="usuario" value="<?php echo !empty($user)? $user:"" ?>">
           <span id='register_username_errorloc' class='error'><?php echo !empty($errores["user"])?$errores["user"]:"" ?></span>
@@ -75,7 +77,7 @@ if ($_POST) {
       <div id='register_password_errorloc' class='error' style='clear:both'><?php echo !empty($errores["cpassword"])?$errores["cpassword"]:"" ?></div>
         <?php }; ?>
         <div class="enviar">
-          <input type="submit" name="submit" value="Enviar">
+          <input type="submit" name="submit" value="Registrarse">
         </div>
                 </div>
 

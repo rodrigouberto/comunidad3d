@@ -2,17 +2,18 @@
   list-style-type: none;
 }
 body{
-  background-color: rgb(231,231,231);
+  /* background-color: rgb(231,231,231); */
+  background-image: url("../img/fondoRegistro2.png");
   margin-top: 0px;
   margin-left: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Assistant", sans-serif;
   width: 100%;
 }
 h3{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistant', sans-serif;
 }
 .main_container {
   margin-bottom: -20px;
@@ -25,7 +26,7 @@ h3{
   color: white;
   background-color: rgb(20,54,86);
   padding: 5px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-size: 20px;
   justify-content: space-between;
   align-items: center;
@@ -38,10 +39,10 @@ h3{
   flex-direction: row;
   align-content: center;
   padding-left: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistant', sans-serif;
 }
 .inicio_sesion{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistant', sans-serif;
   display: flex;
   align-items: center;
 }
@@ -57,12 +58,12 @@ h3{
 
 }
 .email_inicio{
-  width: 100%;
+  : 100%;
   height: 24px;
   font-size: 16px;
 }
 .pass_inicio{
-  width: 100%;
+  : 100%;
   height: 24px;
   font-size: 16px;
 }
@@ -78,7 +79,7 @@ h3{
   background-color: black;
   color: white;
   border-style: solid;
-  border-width: 1px;
+  border-: 1px;
   border-color: white;
   height: 24px;
   font-size: 14px;
@@ -94,7 +95,7 @@ h3{
   color: white;
 }
 .recordar_check{
-  width: 15px;
+  : 15px;
 }
 .main_menu{
   display: flex;
@@ -115,24 +116,26 @@ estilos formularios ============================
 
 .parte_inferior {
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
+  font-family: 'Assistant', sans-serif;
+  /* : 100%; */
   height: 100%;
-  background-image: url(img/fondo_registro.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  /* background-image: url(img/fondo_registro.jpg); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-size: cover; */
   margin-top:-20px;
   padding-top: 30px;
 }
 .registro_usuarios {
-  width: 30%;
+
+  width: 25%;
   align-content: center;
   text-align: center;
   margin:0 auto;
 }
 .registro_usuarios form {
+  margin-top: 70px;
   background-color: white;
 }
   .enviar_registro input {
@@ -152,12 +155,12 @@ estilos formularios ============================
 
 }
 .usuarios_form label {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistant', sans-serif;
 }
 .usuarios_form .normal {
   margin-bottom: 10px;
   height: 22px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistant', sans-serif;
   }
 .enviar {
   margin:0 auto;

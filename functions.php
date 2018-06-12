@@ -58,4 +58,34 @@ $arrayUsuarios["usuarios"][] = $json;
 $arrayUsuarios = json_encode($arrayUsuarios);
 file_put_contents("usuario.json",$arrayUsuarios);
 }
+
+function validarLogin($datos){
+  $errores = [];
+  if($datos["email"]==""){
+    $errores["email"]="Por Favor ingresar tu usuario.";
+  }
+  if ($datos["password"]=="") {
+    $errores["password"]= "Por Favor ingresar su contraseña.";
+  }
+  return $errores;
+}
+
+function loginUsuario($datos){
+  $usuarios = file_get_contents("usuario.json");
+  $usuarios = json_decode($usuarios,true);
+  $usuarios = $usuarios["usuarios"];
+  for ($i=0; $i < count($usuarios); $i++) {
+    $user= json_decode($usuarios[$i],true);
+    if ($datos["email"]==$user["email"]) {
+
+      if (password_verify($datos["password"],$user["password"])) {
+        header("Location: bienvenido.php");
+      }
+    }
+  }
+}
+
+
+
+
 ?>
