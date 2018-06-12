@@ -12,7 +12,18 @@ if ($_POST) {
       guardarUsuario($usuario);
 }
 }
-  ?>
+?>
+<!-- login php =================0 -->
+<?php
+require_once("functions.php");
+if ($_POST) {
+  $erroresLogin = validarLogin($_POST);
+  if (empty($erroresLogin)) {
+    loginUsuario($_POST);
+  }
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -33,16 +44,20 @@ if ($_POST) {
         </div>
 
         <div class="inicio_sesion">
-          <form class="inputs_inicio" action="index.html" method="post">
+          <form class="inputs_inicio" action="" method="post">
         <div class="div_email">
           <input id="email" class="email_inicio" type="email" name="email" value="" placeholder="E-mail">
           <br>
+          <span id='register_email_errorloc' class='error'><?php echo !empty($erroresLogin["email"])?$erroresLogin["email"]."<br>":"" ?></span>
+          <!-- <br> -->
           <label class="recordarUsuario" for="email">Recordar usuario <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
+
         </div>
 
         <div class="div_pass">
           <input id="password" class="pass_inicio" type="password" name="password" value="" placeholder="Password">
           <br>
+          <span id='register_email_errorloc' class='error'><?php echo !empty($erroresLogin["password"])?$erroresLogin["password"]."<br>":"" ?></span>
           <label class="recordarUsuario" for="pass_inicio">Recordar contraseña <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
       </div>
       <div class="iniciarsesion">

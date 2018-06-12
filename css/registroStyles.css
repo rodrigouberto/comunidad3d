@@ -76,10 +76,10 @@ h3{
 }
 
 .boton_inicio {
-  background-color: black;
+  background-color: rgb(20,54,86);
   color: white;
   border-style: solid;
-  border-: 1px;
+  border-width: 1px;
   border-color: white;
   height: 24px;
   font-size: 14px;
@@ -96,6 +96,10 @@ h3{
 }
 .recordar_check{
   : 15px;
+}
+.error{
+  font-size: 14px;
+  color: red;
 }
 .main_menu{
   display: flex;
@@ -135,7 +139,7 @@ estilos formularios ============================
   margin:0 auto;
 }
 .registro_usuarios form {
-  margin-top: 70px;
+  margin-top: 40px;
   background-color: white;
 }
   .enviar_registro input {

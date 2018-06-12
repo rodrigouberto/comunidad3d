@@ -62,10 +62,10 @@ file_put_contents("usuario.json",$arrayUsuarios);
 function validarLogin($datos){
   $errores = [];
   if($datos["email"]==""){
-    $errores["email"]="Por Favor ingresar tu usuario.";
+    $errores["email"]="Por favor ingresar su email.";
   }
   if ($datos["password"]=="") {
-    $errores["password"]= "Por Favor ingresar su contraseña.";
+    $errores["password"]= "Por favor ingresar su contraseña.";
   }
   return $errores;
 }
@@ -84,8 +84,4 @@ function loginUsuario($datos){
     }
   }
 }
-
-
-
-
 ?>
