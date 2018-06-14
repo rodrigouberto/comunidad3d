@@ -53,7 +53,7 @@ function crearUsuario ($datos){
 function guardarUsuario ($usuario){
 $usuarios = file_get_contents("usuario.json");
 $arrayUsuarios = json_decode ($usuarios,true);
-$json = json_encode($usuario);
+$json = json_encode($usuarios);
 $arrayUsuarios["usuarios"][] = $json;
 $arrayUsuarios = json_encode($arrayUsuarios);
 file_put_contents("usuario.json",$arrayUsuarios);

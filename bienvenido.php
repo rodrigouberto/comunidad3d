@@ -1,3 +1,13 @@
+<?php
+require_once("functions.php");
+include_once("registro.php");
+session_start();
+$_SESSION['user']= $user;
+$user=$_POST["nombre"];
+echo "Hello $user";
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
