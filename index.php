@@ -67,6 +67,7 @@ if ($_POST) {
           <h2>Correo electrónico</h2>
           <div class="div_email">
             <input id="email_inicio" class="email_inicio" type="email" name="email" value="" placeholder="E-mail">
+            <span id='register_email_errorloc' class='error'><?php echo !empty($erroresLogin["email"])?$erroresLogin["email"]:"" ?></span>
             <br>
             <label class="recordarUsuario" for="email_inicio">Recordar usuario <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
           </div>
@@ -74,6 +75,7 @@ if ($_POST) {
           <h2>Contraseña</h2>
           <div class="div_pass">
             <input id="pass_inicio" class="pass_inicio" type="password" name="password" value="" placeholder="Password">
+            <span id='register_email_errorloc' class='error'><?php echo !empty($erroresLogin["password"])?$erroresLogin["password"]:"" ?></span>
             <br>
             <label class="recordarUsuario" for="pass_inicio">Recordar contraseña <input type="checkbox" class="recordar_check" name="recordarUsuario" value=""></label>
         </div>

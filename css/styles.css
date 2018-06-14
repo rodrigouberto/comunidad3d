@@ -132,6 +132,10 @@ login =============
 .recordar_check{
 	width: 15px;
 }
+.error{
+  color: red;
+  font-size: 14px;
+}
 /*
 fin login=============
 ====================================== */
