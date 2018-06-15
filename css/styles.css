@@ -1,7 +1,7 @@
 /*Estilos ====================
 =================================*/
 *{
-  font-family: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
 }
 a{
   text-decoration: none;
@@ -30,16 +30,42 @@ body{
 .main_header{
   display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: center;
-	align-content: space-between;
+	flex-direction: row;
+	justify-content: space-between;
 
   color: white;
   background-color: rgb(20,54,86);
   padding: 5px;
-  font-family: "Assistant", "monospace";
-  font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  height: 60px;
 
+}
+.header_izquierdo{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.masInfo {
+  padding: 5px;
+}
+.aboutUs{
+  padding: 5px;
+}
+.masInfo:hover{
+  border-radius: 10%;
+  background-color: white;
+  color: black;
+  font-size: 30px;
+}
+.aboutUs:hover{
+  border-radius: 8%;
+  background-color: white;
+  color: black;
+  font-size: 30px;
 }
 .main_menu{
   display: flex;
@@ -56,6 +82,9 @@ body{
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  padding-left: 30px;
+  font-size: 40px;
+
 }
 /*
 login =============
@@ -74,10 +103,10 @@ login =============
 	padding-right: 10px;
   border-style: solid;
   border-width: 2px;
-  background-color: rgb(231,231,231);
+  background-color: white;
   padding: 15px;
   border-radius: 5px;
-  font-family: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
 }
 
@@ -136,6 +165,22 @@ login =============
   color: red;
   font-size: 14px;
 }
+.registrarse {
+  margin-top: 15px;
+  text-align: center;
+}
+.registrate {
+  margin-top: 5px;
+  text-decoration: none;
+  font-size: 30px;
+  text-decoration: underline;
+  color: black;
+  }
+  .registrate:hover{
+    border-radius: 5%;
+    font-size: 40px;
+    color:rgb(20,54,86);
+  }
 /*
 fin login=============
 ====================================== */
@@ -143,7 +188,7 @@ fin login=============
 li{
   margin-right: 35px;
   color: white;
-  font-style: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
 }
 /*SLIDER =================================
 ======================================*/
@@ -154,7 +199,7 @@ li{
 /*BUSQUEDA IMPRESORES ==========
 =============================*/
 .bienvenida{
-  font-family: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;
@@ -178,7 +223,7 @@ li{
   margin-top: 30px;
   padding: 5px;
   font-size: 18px;
-  font-family: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
   background-color: rgb(20,54,86);
   color: white;
   text-decoration: none;
@@ -187,7 +232,7 @@ li{
 /*REGISTRO IMPRESORES    ==========
 =============================*/
 .impresores{
-  font-family: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
   /* font-size: 40px; */
   display: flex;
   flex-wrap: nowrap;
@@ -211,7 +256,7 @@ li{
   margin-top: 30px;
   padding: 5px;
   font-size: 18px;
-  font-family: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
   background-color: rgb(20,54,86);
   color: white;
   text-decoration: none;
@@ -231,7 +276,7 @@ li{
 }
 .menu_busqueda{
   color: white;
-  font-family: "Assistant", "monospace";
+  font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   |: flex;
   flex-wrap: nowrap;
@@ -240,20 +285,23 @@ li{
   align-items: center;
   padding: 10px;
 }
-.masInfo{
-  margin-top: 55px;
-  padding: 5px;
-  font-size: 16px;
-  font-family: "Assistant", "monospace";
-  background-color: rgb(20,54,86);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
 
 /*
 PRUEBAS ==============
 ======================================== */
+.dos_lados {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-image: url(../img/canva-photo-editor.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
 .lado_izquierdo{
   display: flex;
   flex-wrap: wrap;
@@ -263,9 +311,7 @@ PRUEBAS ==============
   align-items: center;
   align-content: center;
   width: 50%;
-  background-image: url("../img/pattern5.png");
-  background-repeat: no-repeat ;
-
+  color: black;
 }
 .lado_derecho{
   width: 50%;
@@ -277,7 +323,7 @@ PRUEBAS ==============
   align-items: center;
   align-content: flex-start;
   height: 100vh;
-  background-image: url("../img/fondoRegistro.png");
+
   /* background-repeat: ; */
 }
 .login2{
@@ -335,7 +381,7 @@ PRUEBAS ==============
 
 }
 .impresion3d{
-  font-family: "Assistant";
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -383,7 +429,7 @@ about us =========================
   background-repeat: round;
   color: white;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 .aboutUs_izquierdo1 h2 {
   font-size: 24px;
@@ -409,11 +455,11 @@ about us =========================
   background-repeat: round;
   color: white;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
 
 }
 .impresion3d{
-  font-family: "Assistant";
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -463,5 +509,17 @@ about us =========================
   /* background-repeat: round; */
 }
 .aboutUs{
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+.boton{
+  margin-top: 10px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: rgb(20,54,86);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }

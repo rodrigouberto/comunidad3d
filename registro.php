@@ -31,6 +31,7 @@ if ($_POST) {
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/registroStyles.css">
     <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Sunflower:300" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -40,13 +41,13 @@ if ($_POST) {
     <div class="main_container">
       <header class="main_header">
         <div class="header_izquierdo">
-          <h2>Print It!</h2>
+          <h2><a class="lobby" href="index.php">Print It</a>!</h2>
         </div>
 
         <div class="inicio_sesion">
           <form class="inputs_inicio" action="" method="post">
         <div class="div_email">
-          <input id="email" class="email_inicio" type="email" name="email" value="" placeholder="E-mail">
+          <input id="email_login" class="email_inicio" type="email" name="email" value="" placeholder="E-mail">
           <br>
           <span id='register_email_errorloc' class='error'><?php echo !empty($erroresLogin["email"])?$erroresLogin["email"]."<br>":"" ?></span>
           <!-- <br> -->
@@ -80,6 +81,8 @@ if ($_POST) {
           <label for="email">E-mail</label>
           <input class="normal" type="email" name="email" id="email" value="<?php echo !empty($email)? $email:"" ?>">
           <span id='register_email_errorloc' class='error'><?php echo !empty($errores["email"])?$errores["email"]:"" ?></span>
+          <span id="register_email_yaexiste" class="error">
+            <?php echo !empty($erroresExiste["email"])?$erroresExiste["email"]:"" ?></span>
           <label for="password">Contraseña</label>
           <input class="normal" type="password" name="password" id="password" value="">
           <div id='register_password_errorloc' class='error' style='clear:both'><?php echo !empty($errores["password"])?$errores["password"]:"" ?></div>

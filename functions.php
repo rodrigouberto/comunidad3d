@@ -31,8 +31,9 @@ function yaExiste($datos){
   $usuarios = file_get_contents("usuario.json");
   $usuarios = json_decode($usuarios,true);
   $usuarios = $usuarios["usuarios"];
+
   for ($i=0; $i < count($usuarios); $i++) {
-    $user= json_decode($usuarios[$i],true);
+      $user= json_decode($usuarios[$i],true);
     if ($datos["usuario"]==$user["usuario"]) {
       $erroresExiste["username"]="Ya existe ese usuario por favor elija otro";
     }
@@ -53,7 +54,7 @@ function crearUsuario ($datos){
 function guardarUsuario ($usuario){
 $usuarios = file_get_contents("usuario.json");
 $arrayUsuarios = json_decode ($usuarios,true);
-$json = json_encode($usuarios);
+$json = json_encode($usuario);
 $arrayUsuarios["usuarios"][] = $json;
 $arrayUsuarios = json_encode($arrayUsuarios);
 file_put_contents("usuario.json",$arrayUsuarios);

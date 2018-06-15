@@ -1,10 +1,7 @@
 <?php
 require_once("functions.php");
-include_once("registro.php");
 session_start();
-$_SESSION['user']= $user;
-$user=$_POST["nombre"];
-echo "Hello $user";
+ echo $_SESSION["nombre_usuario"];
 
  ?>
 
@@ -17,5 +14,7 @@ echo "Hello $user";
   </head>
   <body>
     <h1>BIENVENIDO</h1>
+
+    <h2><a href="index.php">cerrar sesion</a></h2>
   </body>
 </html>
