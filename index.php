@@ -62,7 +62,7 @@ if ($_POST) {
           </div>
           <div class="header_izquierdo">
             <div><a class="masInfo" href="#informacion" target="">Mas info</a></div>
-            <div><a class="aboutUs" href="#aboutUs">Acerca de Nosotros</a></div>
+            <div><a class="aboutUss" href="#aboutUs">Acerca de Nosotros</a></div>
           </div>
       </header>
   <div class="main_container">
@@ -118,12 +118,7 @@ if ($_POST) {
       </div>
     </div>
   </div>
-<div class="info_gral">
-
-    <div id="informacion" class="info_izquierdo">
-
-    </div>
-    <div class="info_derecho">
+<div class="info_gral" id="informacion">
       <div class="impresion3d">
 
         <h2>¿Que es la impresión 3D?</h2>
@@ -135,26 +130,23 @@ if ($_POST) {
         <p>También podes conseguir diseños listos para imprimir en </p>
         <a href="www.thingiverse.com">www.thingiverse.com</a>
     </div>
-
     <a class="boton" href="#aboutUs" target="">Ver más</a>
-
   </div>
-</div>
+
 
 <!--
     about us ===========
     ================================ -->
-  <div class="info_us">
 
-    <div id="aboutUs" class="aboutUs_izquierdo1">
+    <div id="aboutUs" class="aboutUs">
       <h2>¿Querés imprimir algo?</h2>
       <p>Registrate y encontrá dónde materializar tus ideas!</p>
       <h2>Es muy facil:</h2>
       <ul>
-        <li>Filtras impresores por zona, material u otros criterios.</li>
-        <li>Pedís cotización a los impresores que hayas seleccionado.</li>
-        <li>Elegís el que más te convenga y listo!</li>
-        <h2>Ya tenes tu objeto 3D</h2>
+        <li>1-Filtras impresores por zona, material u otros criterios.</li>
+        <li>2-Pedís cotización a los impresores que hayas seleccionado.</li>
+        <li>3-Elegís el que más te convenga y listo!</li>
+        <li>4-Disfrutar tu objeto 3D!</li>
 
       </ul>
 
@@ -162,12 +154,15 @@ if ($_POST) {
         <p>Podes ganar dinero de forma cómoda y sencilla.</p>
         <p>Registrate y ofrecé tu servicio de impresión 3D</p>
         <a href="#inicio"class="boton">Volver al inicio</a>
+          </div>
+
 
 
     <!-- </div> -->
     </div>
 
   </div>
+</div>
 </div>
 
 </body>

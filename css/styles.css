@@ -52,7 +52,7 @@ body{
 .masInfo {
   padding: 5px;
 }
-.aboutUs{
+.aboutUss{
   padding: 5px;
 }
 .masInfo:hover{
@@ -61,7 +61,7 @@ body{
   color: black;
   font-size: 30px;
 }
-.aboutUs:hover{
+.aboutUss:hover{
   border-radius: 8%;
   background-color: white;
   color: black;
@@ -172,13 +172,13 @@ login =============
 .registrate {
   margin-top: 5px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: underline;
   color: black;
   }
   .registrate:hover{
     border-radius: 5%;
-    font-size: 40px;
+    font-size: 30px;
     color:rgb(20,54,86);
   }
 /*
@@ -339,20 +339,6 @@ PRUEBAS ==============
 
 /* mas info =================
 ========================================================= */
-.info_derecho{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  width: 50%;
-  height: 100vh;
-
-  color: white;
-}
-
 .info_gral{
   display: flex;
   flex-wrap: wrap;
@@ -361,25 +347,15 @@ PRUEBAS ==============
   text-align: center;
   align-items: center;
   align-content: center;
-  background-image: url("../img/fondo2.jpg");
-  background-repeat: round;
   width: 100%;
-}
-
-
-}
-.info_izquierdo{
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: flex-start;
   height: 100vh;
-
+  background-image: url("../img/fondo2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
+
 .impresion3d{
   font-family: 'Quicksand', sans-serif;
   display: flex;
@@ -387,7 +363,6 @@ PRUEBAS ==============
   flex-direction: column;
   text-align: center;
   justify-content: center;
-
   width: 80%;
   font-size: 20px;
 }
@@ -403,20 +378,9 @@ PRUEBAS ==============
 /*
 about us =========================
 ============================================== */
-.info_us{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  width:100%;
-  background-image: url("../img/foto4.jpg");
-  background-repeat: round;
-}
 
-.aboutUs_izquierdo1{
+
+.aboutUs{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -427,92 +391,25 @@ about us =========================
   width: 100%;
   height: 100vh;
   background-repeat: round;
-  color: white;
-  font-size: 20px;
+  color: black;
+  font-size: 30px;
   font-family: 'Quicksand', sans-serif;
+  background-image: url("../img/pattern5.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.aboutUs_izquierdo1 h2 {
-  font-size: 24px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-    font-weight: bold;
+.aboutUs li {
+  color: black;
 }
-.aboutUs_izquierdo1 li{
-  color: white;
-  margin-top: 5px;
-
-}
-.aboutUs_derecho1{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  height: 50vh;
-  background-repeat: round;
-  color: white;
-  font-size: 20px;
-  font-family: 'Quicksand', sans-serif;
-
-}
-.impresion3d{
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-
-  width: 80%;
-  font-size: 20px;
-}
-.impresion3d h2 {
+.aboutUs h2 {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
 }
-.impresion3d a {
-  color: white;
-}
-
-
-.aboutUs_derecho2{
-  font-family: sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  /* height: 50vh; */
-
-
-
-}
-.aboutUs_izquierdo2{
-  width: 50%;
-  height: 50vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: flex-start;
-  /* background-image: url("../img/elefante.jpg"); */
-  /* background-repeat: round; */
-}
-.aboutUs{
-  font-family: 'Quicksand', sans-serif;
-}
 .boton{
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: 'Quicksand', sans-serif;
   color: white;
   padding: 5px;
@@ -523,3 +420,24 @@ about us =========================
   text-decoration: none;
   border-radius: 5px;
 }
+@media only screen and (max-width: 750px) {
+    .dos_lados {display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;}
+    .lado_izquierdo{
+      width: 100%;
+    }
+    .lado_derecho{
+      margin-top: 40px;
+      width: 100%;
+    }
+    .info_derecho{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .impresion3d{
+      width: 100%;
+      text-align: center;
+    }
+    }
