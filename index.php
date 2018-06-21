@@ -1,14 +1,37 @@
 <?php
+session_start();
 require_once("functions.php");
-if ($_POST) {
-  $erroresLogin = validarLogin($_POST);
-  if (empty($erroresLogin)) {
-    loginUsuario($_POST);
-  }
+
+if(!empty($_SESSION['nombre']) || Cookies()){
+  header('Location: bienvenido.php');
+  // var_dump($_SESSION);
 }
 
 
- ?>
+if ($_POST) {
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $erroresLogin = validarLogin($_POST);
+  if (empty($erroresLogin)) {
+    $erroresRecordarLogin = logInUsuario($_POST);
+    if (empty($erroresRecordarLogin)){
+      $nombre = getNombre($email);
+      $_SESSION['nombre'] = $nombre;
+      $usuario = getUsuario($email);
+      $_SESSION['usuario']= $usuario;
+      $usuario = getEmail($email);
+      $_SESSION['email']= $usuario;
+      if (!empty($_POST["recordarUsuario"])){
+        setcookie("nombre", '$nombre', time()+3600);
+        setcookie("email", '$email', time()+3600);
+        $password = password_hash($password,PASSWORD_DEFAULT);
+        setcookie("password", '$password', time() +3600);
+      }
+      header('Location: bienvenido.php');
+    }
+  }
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -41,24 +64,17 @@ if ($_POST) {
                  $('html,body').animate({scrollTop: targetOffset}, 1000);
 
                  return false;
-
             }
-
        }
-
    });
-
 });
 			</script>
   </head>
   <body>
 
       <header class="main_header">
-
           <div class="menu_principal" id="inicio">
-
             <h3>Print it!</h3>
-
           </div>
           <div class="header_izquierdo">
             <div><a class="masInfo" href="#informacion" target="">Mas info</a></div>
@@ -109,8 +125,8 @@ if ($_POST) {
         </div>
         <input class="boton_inicio" type="submit" name="submit_usuario" value="Iniciar Sesión">
           <div class="registrarse">
-            <div><h2>No tenes cuenta? Registrate!</h2></div>
-            <a class="registrate" target="_blank" href="Registro.php">Registrarse</a>
+            <div><h2>No tenes cuenta?</h2></div>
+            <a class="registrate" target="_blank" href="Registro.php">Registrate</a>
           </div>
 
         </form>

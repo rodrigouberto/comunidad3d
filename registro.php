@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once("functions.php");
 if ($_POST) {
   $nombre=$_POST["nombre"];

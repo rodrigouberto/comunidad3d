@@ -85,4 +85,60 @@ function loginUsuario($datos){
     }
   }
 }
+
+
+
+// =============================================================
+// PROBANDO CODIGO DE GASPI ==============
+// =====================================================//
+
+
+
+function getNombre($usuario){
+  $usuarios = file_get_contents("usuario.json");
+  $usuarios = json_decode($usuarios, true);
+  $usuarios = $usuarios["usuarios"];
+    for ($i=0; $i < count($usuarios);$i++){
+      $user = json_decode($usuarios[$i],true);
+        if ($usuario == $user["email"]){
+          return $user['nombre'];
+        }
+    }
+}
+function getUsuario($usuario){
+  $usuarios = file_get_contents("usuario.json");
+  $usuarios = json_decode($usuarios, true);
+  $usuarios = $usuarios["usuarios"];
+    for ($i=0; $i < count($usuarios);$i++){
+      $user = json_decode($usuarios[$i],true);
+        if ($usuario == $user["email"]){
+          return $user['usuario'];
+        }
+    }
+}
+function getEmail($usuario){
+  $usuarios = file_get_contents("usuario.json");
+  $usuarios = json_decode($usuarios, true);
+  $usuarios = $usuarios["usuarios"];
+    for ($i=0; $i < count($usuarios);$i++){
+      $user = json_decode($usuarios[$i],true);
+        if ($usuario == $user["email"]){
+          return $user['email'];
+        }
+    }
+}
+
+function Cookies(){
+  if (isset($_COOKIE['nombre'])){
+    $errores = logInUsuario($_COOKIE);
+    if (empty($errores)){
+      return true;
+
+    }
+  }
+  else {
+    return false;
+  }
+}
+
 ?>
