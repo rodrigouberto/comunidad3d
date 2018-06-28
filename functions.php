@@ -58,6 +58,8 @@ $json = json_encode($usuario);
 $arrayUsuarios["usuarios"][] = $json;
 $arrayUsuarios = json_encode($arrayUsuarios);
 file_put_contents("usuario.json",$arrayUsuarios);
+header("Location: bienvenido.php");
+
 }
 
 function validarLogin($datos){

@@ -155,31 +155,43 @@ if ($_POST) {
     ================================ -->
 
     <div id="aboutUs" class="aboutUs">
-      <h2>¿Querés imprimir algo?</h2>
-      <p>Registrate y encontrá dónde materializar tus ideas!</p>
-      <h2>Es muy facil:</h2>
-      <ul>
-        <li>1-Filtras impresores por zona, material u otros criterios.</li>
-        <li>2-Pedís cotización a los impresores que hayas seleccionado.</li>
-        <li>3-Elegís el que más te convenga y listo!</li>
-        <li>4-Disfrutar tu objeto 3D!</li>
+      <div class="buscarImpresor">
 
-      </ul>
+        <h2>¿Querés imprimir algo?</h2>
+        <p>Registrate y encontrá dónde volver realidad tus ideas!</p>
+        <br>
+        <h3>Materializá tu objeto en 3 simples pasos:</h3>
+        <ul>
 
+          <br>
+          <li>1.Filtras impresores por zona, material u otros criterios.</li>
+
+          <li>2.Pedís cotización a los impresores que hayas seleccionado.</li>
+
+          <li>3.Elegís el que más te convenga y listo!</li>
+          <br>
+          <li>Ya tenes tu objeto 3D!</li>
+
+        </ul>
+        <br><br>
         <h2>¿Tenes una impresora 3D?</h2>
-        <p>Podes ganar dinero de forma cómoda y sencilla.</p>
-        <p>Registrate y ofrecé tu servicio de impresión 3D</p>
+        <ul>
+          <li>Podes ganar dinero de forma cómoda y sencilla.</li>
+          <li>Registrate y completá los datos requeridos.</li>
+          <li>Ya estás ofrenciendo tu servicio de impresion 3D!</li>
+        </ul>
+
         <a href="#inicio"class="boton">Volver al inicio</a>
-          </div>
+      </div>
 
 
-
-    <!-- </div> -->
     </div>
 
-  </div>
+
+
 </div>
-</div>
+
+
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <?php
 session_start();
-
 require_once("functions.php");
-if ($_POST) {
+if (isset($_POST['registro'])) {
+
   $nombre=$_POST["nombre"];
   $email=$_POST["email"];
   $password=$_POST["password"];
@@ -14,17 +14,38 @@ if ($_POST) {
       guardarUsuario($usuario);
 }
 }
-?>
-<!-- login php =================0 -->
-<?php
-require_once("functions.php");
+// -- login php =================
+
+// require_once("functions.php");
+// if (isset($_POST['loginUsuario'])) {
+//   $erroresLogin = validarLogin($_POST);
+//   if (empty($erroresLogin)) {
+//     loginUsuario($_POST);
+//   }
+// }
 if ($_POST) {
+  $email = $_POST['email'];
+  $password = $_POST['password'];
   $erroresLogin = validarLogin($_POST);
   if (empty($erroresLogin)) {
-    loginUsuario($_POST);
+    $erroresRecordarLogin = logInUsuario($_POST);
+    if (empty($erroresRecordarLogin)){
+      $nombre = getNombre($email);
+      $_SESSION['nombre'] = $nombre;
+      $usuario = getUsuario($email);
+      $_SESSION['usuario']= $usuario;
+      $usuario = getEmail($email);
+      $_SESSION['email']= $usuario;
+      if (!empty($_POST["recordarUsuario"])){
+        setcookie("nombre", '$nombre', time()+3600);
+        setcookie("email", '$email', time()+3600);
+        $password = password_hash($password,PASSWORD_DEFAULT);
+        setcookie("password", '$password', time() +3600);
+      }
+      header('Location: bienvenido.php');
+    }
   }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +69,10 @@ if ($_POST) {
 
         <div class="inicio_sesion">
           <form class="inputs_inicio" action="" method="post">
+
+            <input type='hidden' name='loginUsuario' value='1'/>
+
+
         <div class="div_email">
           <input id="email_login" class="email_inicio" type="email" name="email" value="" placeholder="E-mail">
           <br>
@@ -72,6 +97,10 @@ if ($_POST) {
       <div class="parte_inferior">
         <div class="registro_usuarios">
         <form class="usuarios_form" action="" method="post">
+
+          <input type='hidden' name='registro' value='1'/>
+
+
           <h3>Registrese!</h3>
 
           <label for="nombreUsuario">Nombre de usuario</label>
