@@ -76,6 +76,7 @@
   padding-top: 10px;
 }
 .parte-derecha{
+  border-radius: 7px;
   text-align: center;
   width: 70%;
   height: 100%;
@@ -83,21 +84,61 @@
   background-color: white;
   padding: 5px;
 }
+.formsend{
+  padding: 10px;
+}
+.sendPost {
+  border: 3px;
+  border-radius: 4px;
+  border-color: black;
+  padding: 20px;
+  border-style: solid;
+  border-width: medium;
+  margin-bottom: 30px;
+}
+.datossendimpresion{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-around;
+
+
+}
+.datos_impresion{
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.botonsend {
+  padding: 10px;
+  border: 0px;
+  border-radius: 4px;
+  transition: 0.3s;
+  background-color: rgb(20,54,86);
+  color: white;
+}
+.botonsend:hover {
+  font-size: 15px;
+}
 /* PUBLICACIONES========
 ===================== */
 .publicacion{
-  font-family: 'Quicksand', sans-serif;
+  border: 3px;
+  border-radius: 4px;
+  border-color: black;
+  padding: 20px;
+  border-style: solid;
+  border-width: medium;
+  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  align-content: space-between;
-  align-items: center;
-  color: black;
-  width:100%;
-  border-bottom: solid;
-  border-width: 1px;
-  margin-top: 10px;
+  text-align: center;
+}
+.publicaciontitle{
+  width: 100%;
 }
 .header_publicacion{
   font-family: 'Quicksand', sans-serif;
@@ -119,22 +160,44 @@
   align-items: center;
   width: 50%;
 }
+.p-parteizq{
+  width: 40%;
+  text-align: center;
+}
+.p-parted{
+  width: 50%;
+  text-align: center;
+}
 .imagen_impresion{
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: flex-end;
-  align-content: flex-end;
-  align-items: flex-end;
   font-family: 'Quicksand', sans-serif;
-
-  justify-content: flex-end;
   align-content: center;
   align-items: center;
   width: 50%;
+  margin-right: 0px;
+}
+.imagen_post{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: 0px;
 }
 .imagen_impresion img{
 
-  width:15%;
+  width:32%;
+  border-radius: 5px;
+  margin: 5px;
+  border-width: 1px;
+}
+.imagen_post img{
+
+  width:32%;
   border-radius: 5px;
   margin: 5px;
   border-width: 1px;

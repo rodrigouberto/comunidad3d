@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/miPerfil.css">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
     <title>Print it - Mi Perfil</title>
   </head>
@@ -48,30 +49,72 @@
         ?>
       </div>
       <div class="parte-derecha">
-        <h3>Ultimas impresiones:</h3>
-
-        <div class="publicacion">
-          <div class="header_publicacion">
-            <div class="usuario_publicacion">
-              <img class="img_perfil" src="img/img-usuario.svg" alt="img_perfil">
-              <h2><a href="">USER NAME</a></h2>
-            </div>
-            <div class="imagen_impresion">
-              <p>Agregar imagenes</p>
-              <img class="img" src="img/plus.png" alt="img1">
-              <img class="img" src="img/plus.png" alt="img1">
-              <img class="img" src="img/plus.png" alt="img1">
-            </div>
-          </div>
+        <div class="sendPost">
+          <h3>Enviar publicacion</h3>
           <div class="datos_impresion">
-            <ul>
-              <li>Impresora: Prusa I3</li>
-              <li>Material: ABS</li>
-              <li>Velocidad: 50mm/s</li>
-              <li>Infill: 20%</li>
-            </ul>
+            <form class="formsend" action="" method="get">
+              <p>Descripcion</p>
+              <textarea name="name" style="height:75px; width:300px;"></textarea>
+              <div class="datossendimpresion">
+                <div class="">
+                  <p>Impresion:</p>
+                  <p>Material:</p>
+                  <p>Velocidad:</p>
+                  <p>Infill:</p>
+                </div>
+                <div class="">
+                  <p><input type="text" name="impresora" value=""></p>
+                  <p><input type="text" name="material" value=""></p>
+                  <p><input type="text" name="velocidad" value=""></p>
+                  <p><input type="text" name="infill" value=""></p>
+                </div>
+              </div>
+            <input class="botonsend" type="submit" name="enviar" value="Enviar">
+          </form>
+          <div class="imagen_impresion">
+            <p>Agregar imagenes</p>
+            <div class="">
+              <img class="img" src="img/plus.png" alt="img1">
+              <img class="img" src="img/plus.png" alt="img1">
+              <img class="img" src="img/plus.png" alt="img1">
+            </div>
           </div>
-
+        </div>
+      </div>
+      <div class="">
+        <h2>Publicaciones</h2>
+        <div class="publicacion">
+          <div class="p-parteizq">
+            <div class="datos_impresion">
+              <p style="width:100%;">Descripcion</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit.</p>
+              <div class="datossendimpresion" style="width:100%;">
+                <div class="">
+                  <p>Impresion:</p>
+                  <p>Material:</p>
+                  <p>Velocidad:</p>
+                  <p>Infill:</p>
+                </div>
+                <div class="">
+                  <p>asda</p>
+                  <p>asdas</p>
+                  <p>sad</p>
+                  <p>asd</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-parted">
+            <div class="imagen_post">
+              <p>Imagenes</p>
+              <div class="">
+                <img class="img" src="img/plus.png" alt="img1">
+                <img class="img" src="img/plus.png" alt="img1">
+                <img class="img" src="img/plus.png" alt="img1">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
           </div>
         </div>
