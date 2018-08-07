@@ -63,12 +63,13 @@
       <div class="main_container">
         <br>
         <h2>Ultimas impresiones</h2>
+        @foreach ($users as $user)
         <div class="publicacion">
 
           <div class="header_publicacion">
             <div class="usuario_publicacion">
               <img class="img_perfil" src="img/img-usuario.svg" alt="img_perfil">
-              <h2>Usuario</h2>
+              <h2><a href="/user/{{$user->id}}">{{$user->name}}</a></h2>
             </div>
                   <a href="#">Contactar Impresor</a>
           </div>
@@ -86,6 +87,12 @@
 
           </div>
       </div>
+      @endforeach
+
+
+
+
+
     </div>
 
 </body>

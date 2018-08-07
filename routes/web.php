@@ -20,11 +20,14 @@ Route::get('busqueda', 'busquedaController@buscar');
 
 Route::get('printit/registro','registroController@registro');
 Route::get('miPerfil','perfilController@miPerfil');
+
 // Route::get('printit/bienvenido','homeController@home');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('printerProfile/{id}','perfilController@printerProfile');
+Route::get('printerForm','perfilController@printerForm');
+Route::get('printerForm/create','perfilController@storage');
 
 
 

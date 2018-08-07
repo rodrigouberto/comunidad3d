@@ -1,10 +1,18 @@
 *{
   font-family: 'Quicksand', sans-serif;
    }
+* li{
+  text-decoration: none;
+  list-style: none;
+}
+* ul{
+  padding-left: 0px;
+}
    body{
      /* background-image: url("../img/fondoRegistro.png"); */
      background-color: rgb(231,231,231);
      /* background-repeat: round; */
+     margin: 0 auto;
    }
 .main_header{
   display: flex;
@@ -13,163 +21,143 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  text-align: center;
   color:white;
   background-color: rgb(20,54,86);
   padding: 5px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 25px;
   height: 60px;
+  text-decoration: none;
+  margin: 0px;
 }
 .home{
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  font-size: 40px;
+  width: 30%;
 }
 .header_usuario{
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
+  width: 15%;
 }
 .img_perfil{
   height: 60px;
   border-radius: 50px;
 }
-.main_container{
+.opciones {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  width: 100%;
-
-}
-.info_usuario{
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-  background-color: white;
-  margin-top: 20px;
-  padding: 30px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-.info_usuario img{
-  height: 200px;
-}
-.info_usuario form {
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  text-align: center;
-}
-.info_usuario form h2{
-  margin-bottom: 5px;
-  width: 100%;
-}
-.info_usuario form label{
-  margin-bottom: 5px;
-  width: 100%;
-}
-.info_usuario input{
-  width: 100%;
-}
-.boton{
-  background-color: rgb(20,54,86);
+  align-content: center;
   color: white;
-  border-style: solid;
-  border-width: 1px;
-  font-size:18px;
+  width: 15%;
 }
+.opciones a{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+  height: 100%;
+}
+.parte-izq{
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+.parte-izq img{
+  width: 45%;
+}
+.parte-izq li{
+  padding-top: 10px;
+}
+.parte-derecha{
+  text-align: center;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  background-color: white;
+  padding: 5px;
+}
+/* PUBLICACIONES========
+===================== */
+.publicacion{
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  color: black;
+  width:100%;
+  border-bottom: solid;
+  border-width: 1px;
+  margin-top: 10px;
+}
+.header_publicacion{
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width:100%;
+}
+.usuario_publicacion{
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  width: 50%;
+}
+.imagen_impresion{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: flex-end;
+  font-family: 'Quicksand', sans-serif;
 
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  width: 50%;
+}
+.imagen_impresion img{
 
+  width:15%;
+  border-radius: 5px;
+  margin: 5px;
+  border-width: 1px;
+}
+.usuario_publicacion img{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* {
-    margin:0px;
-    padding:0px;
-  }
-
-  #header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    align-items: center;
-    margin:auto;
-    width:100%;
-    font-family:Arial, Helvetica, sans-serif;
-  }
-
-  ul, ol {
-    list-style:none;
-  }
-
-  .nav > li {
-    float:left;
-  }
-
-  .nav li a {
-    background-color:rgb(20,54,86);
-    color:#fff;
-    text-decoration:none;
-    padding:10px 12px;
-    display:block;
-  }
-
-  .nav li a:hover {
-    background-color:#434343;
-  }
-
-  .nav li ul {
-    display:none;
-    position:absolute;
-    min-width:140px;
-  }
-
-  .nav li:hover > ul {
-    display:block;
-  }
-
-  .nav li ul li {
-    position:relative;
-  }
-
-  .nav li ul li ul {
-    right:-140px;
-    top:0px;
-  }
+}
+.datos_impresion ul{
+margin-bottom: 15px;
+}
+.datos_impresion ul li{
+text-align: left;
+font-size: 18px;
+margin-left: 10px;
+margin-bottom: 3px;
+}
+.header_publicacion a{
+text-decoration: none;
+border-style: solid;
+background-color: rgb(20,54,86);
+color: white;
+border-radius: 5px;
+padding: 5px;
+margin: 10px;
+font-size: 14px;
+}

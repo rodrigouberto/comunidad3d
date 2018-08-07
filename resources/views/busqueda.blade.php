@@ -1,4 +1,3 @@
-
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
@@ -12,13 +11,10 @@
       <title>Print it!</title>
     </head>
     <body>
-
-
       <div class="main_header">
         <div class="home">
           <h2>Print it!</h2>
         </div>
-
         <div class="header_usuario">
           <div id="header">
           			<ul class="nav">
@@ -35,10 +31,8 @@
         </div>
       </div>
       <div class="busqueda">
-
         <form class="formBusqueda" action="busqueda" method="get">
           <h3>Buscar impresor</h3>
-
           <label for="Zona">Zona</label>
           <select class="List" name="zona">
             <option selected value="0"> Seleccionar Zona </option>
@@ -62,46 +56,35 @@
           <input class="button" type="submit" name="buscar" value="Buscar">
         </form>
       </div>
-
-
       <div class="main_container">
-              @foreach($printers as $printer)
-              <div class="resultadosBusqueda">
-                <div class="izq_col">
-                  <img class="perfil_impresor" src="{{$printer->perfil_src}}" alt="">
-                  {{ $printer->nombreUsuario }}
-                   <!-- $printer->materiales  -->
-
-                </div>
-                <div class="datos_tecnicos">
-                  <ul>
-                    <li>Materiales:</li>
-                    <li>Tamaño máximo de impresión:</li>
-                    <li>Espesores de capa:</li>
-                    <li>Modelado 3D:</li>
-                  </ul>
-                </div>
-                <div class="datos_personales">
-                  <ul>
-                    <li>Zona:</li>
-                    <li>Reputación:</li>
-                    <li>Precio/hora:</li>
-                    <li>Envíos:</li>
-                  </ul>
-                </div>
-                <!-- <div class="comentarios">
-                  <h3>Comentarios</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div> -->
-                <div class="links">
-                  <a href="#">Ver perfil</a>
-                  <a href="#">Contactar</a>
-                </div>
-              </div>
-
-              @endforeach
-
-
+                  @foreach($printers as $printer)
+                  <div class="resultadosBusqueda">
+                    <div class="izq_col">
+                      <img class="perfil_impresor" src="{{$printer->perfil_src}}" alt="">
+                      {{$printer->nombreUsuario}}
+                    </div>
+                    <div class="datos_tecnicos">
+                      <ul>
+                        <li>Materiales:</li>
+                        <li>Tamaño máximo de impresión:</li>
+                        <li>Espesores de capa:</li>
+                        <li>Modelado 3D:</li>
+                      </ul>
+                    </div>
+                    <div class="datos_personales">
+                      <ul>
+                        <li>Zona:</li>
+                        <li>Reputación:</li>
+                        <li>Precio/hora:</li>
+                        <li>Envíos:</li>
+                      </ul>
+                    </div>
+                    <div class="links">
+                      <a href="/printerProfile/{{$printer->id}}">Ver perfil</a>
+                      <a href="">Contactar</a>
+                    </div>
+                  </div>
+                  @endforeach
 
       </div>
 
