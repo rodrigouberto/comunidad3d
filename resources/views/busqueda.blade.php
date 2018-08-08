@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <link rel="stylesheet" href="css/reset.css">
-      <link rel="stylesheet" href="css/bienvenido.css">
+      <link rel="stylesheet" href="css/home.css">
       <link rel="stylesheet" href="css/busqueda.css">
 
       <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">

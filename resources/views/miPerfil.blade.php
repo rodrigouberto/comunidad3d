@@ -10,19 +10,23 @@
   </head>
   <body>
     <div class="main_header">
-      <div class="opciones">
-        <div><a href="#">Home</a></div>
-        <div><a href="#">Algo</a></div>
-      </div>
-
       <div class="home">
-        <p>Print it!</p>
+        <h2>Print it!</h2>
       </div>
       <div class="header_usuario">
-        {{Auth::user()->name}}
-        <img class="img_perfil" src="{{Auth::user()->perfil_src}}">
+        <div id="header">
+              <ul class="nav">
+                <li><a class="opciones_usuario" href="miPerfil">{{Auth::user()->name}}</a>
+                  <ul>
+                     <h2><a href="home">Home</a></h2>
+                     <h2><a href="miPerfil">Mi perfil</a></h2>
+                    <li><h2><a href="logout">Cerrar sesion</a></h2></li>
+                  </ul>
+                </li>
+              </ul>
+            <img class="img_perfil" src="{{Auth::user()->perfil_src}}" alt="img_perfil">
+        </div>
       </div>
-
     </div>
     <div class="container">
       <div class="parte-izq">

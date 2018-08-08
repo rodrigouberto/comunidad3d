@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','indexController@index');
 
 Route::get('printit', 'indexController@index');
 Route::get('busqueda', 'busquedaController@buscar');
@@ -26,6 +24,7 @@ Route::get('miPerfil','perfilController@miPerfil');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('printerProfile/{id}','perfilController@printerProfile');
+Route::get('/logout','LogOutController@logout');
 Route::get('printerForm','perfilController@printerForm');
 Route::get('printerForm/create','perfilController@storage');
 
