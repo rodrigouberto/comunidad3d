@@ -23,8 +23,8 @@
     </div>
     <div class="container">
       <div class="parte-izq">
-        <img class="perfil_impresor" src="{{asset($printer->perfil_src)}}" alt="">
-        <h2>{{$printer->nombreUsuario}}</h2>
+        <img class="perfil_impresor" src="{{$printer->perfil_src}}" alt="">
+        <h2>{{$printer->name}}</h2>
         <p>Descripcion usuario</p>
         <ul>
           <li>Buenos Aires, Argentina</li>
@@ -35,6 +35,7 @@
         <p>{{$printer->email}}</p>
         <p>11-1234-4567</p>
       </div>
+
       <div class="parte-derecha">
         <h3>Ultimas impresiones:</h3>
         <div class="publicaciones">

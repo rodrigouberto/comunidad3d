@@ -65,26 +65,23 @@
         <h2>Ultimas impresiones</h2>
         @foreach ($users as $user)
         <div class="publicacion">
-
-          <div class="header_publicacion">
-            <div class="usuario_publicacion">
-              <img class="img_perfil" src="img/img-usuario.svg" alt="img_perfil">
+          <div class="parte-izq" style="width:30%;">
+            <div class="postt">
+              <img class="" style="height:80px;" src="img/img-usuario.svg" alt="img_perfil">
               <h2><a href="/user/{{$user->id}}">{{$user->name}}</a></h2>
             </div>
-                  <a href="#">Contactar Impresor</a>
-          </div>
-          <div class="datos_impresion">
-            <ul>
+            <ul class="ul-post">
               <li>Impresora: Prusa I3</li>
               <li>Material: ABS</li>
               <li>Velocidad: 50mm/s</li>
               <li>Infill: 20%</li>
             </ul>
-
           </div>
-          <div class="imagen_impresion">
+          <div class="parte-medio">
+              <a href="/printerProfile/{{$user->printers_id}}">Contactar Impresor</a>
+          </div>
+          <div class="parte-der">
             <img class="img" src="img/elefante.jpg" alt="img1">
-
           </div>
       </div>
       @endforeach

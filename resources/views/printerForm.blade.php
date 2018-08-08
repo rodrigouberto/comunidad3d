@@ -9,11 +9,7 @@
       @csrf
       <p>Datos personales</p>
       <input type="hidden" name="nombreUsuario" value="{{Auth::user()->name}}">
-      <label for="email">Email:</label>
-      <input type="email" name="email" value="{{Auth::user()->email}}">
       <br>
-      <label for="tel">Telefono</label>
-      <input type="text" name="tel" value="{{old('tel')}}">
       <br>
       <!-- <label for="web">Web</label>
       <input type="text" name="" value="" placeholder="www.miweb.com.ar">
